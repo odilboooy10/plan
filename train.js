@@ -90,3 +90,17 @@
   
 //   console.log(letterCount("e", "engineer"));
   
+
+//TASK 2
+
+
+function countDigits(str) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        count++;
+    }
+    return count;
+  }
+  
+  const str = "I am a Programmer"
+  console.log("result:", countDigits(str));
