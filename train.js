@@ -94,49 +94,51 @@
 //TASK 2
 
 
-// function countDigits(str) {
-//     let count = 0;
-//     for (let i = 0; i < str.length; i++) {
-//         count++;
+// const countDigits = (data) => {
+//   let arr = [];
+//   let changeArr = data.split("");
+//   for (i = 0; i < changeArr.length; i++) {
+//     if (!isNaN(changeArr[i])) {
+//       arr.push(changeArr[i]);
 //     }
-//     return count;
 //   }
-  
-//   const str = "I am a Programmer"
-//   console.log("result:", countDigits(str));
+
+//   return arr.length;
+// };
+// console.log(countDigits("123456asdfghjkuytrd1234gfhdfs1234"));
 
 
 
   // TASK 3
 
-  class Apple {
-    // constructor
-    constructor(Iphone, Macbook, Airpods) {
-      this.Iphone = Iphone;
-      this.Macbook = Macbook;
-      this.Airpods = Airpods;
-    }
+//   class Apple {
+//     // constructor
+//     constructor(Iphone, Macbook, Airpods) {
+//       this.Iphone = Iphone;
+//       this.Macbook = Macbook;
+//       this.Airpods = Airpods;
+//     }
   
-    sell(Iphone) {
-      this.Iphone -= Iphone;
-    }
+//     sell(Iphone) {
+//       this.Iphone -= Iphone;
+//     }
   
-    receive(Airpods) {
-      this.Airpods += Airpods;
-    }
+//     receive(Airpods) {
+//       this.Airpods += Airpods;
+//     }
   
-    left() {
-      let now = new Date();
-      let hours = now.getHours();
-      let minutes = now.getMinutes();
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      console.log(
-        `Now ${hours}:${minutes} We have ${this.Iphone} Iphone , ${this.Macbook} Macbook and ${this.Airpods} ta Airpods available!`
-      );
-    }
-  }
-  const apple = new Apple(4, 5, 2);
-  apple.left();
-  apple.sell(3);
-  apple.receive(4);
-  apple.left();
+//     left() {
+//       let now = new Date();
+//       let hours = now.getHours();
+//       let minutes = now.getMinutes();
+//       minutes = minutes < 10 ? "0" + minutes : minutes;
+//       console.log(
+//         `Now ${hours}:${minutes} We have ${this.Iphone} Iphone , ${this.Macbook} Macbook and ${this.Airpods} ta Airpods available!`
+//       );
+//     }
+//   }
+//   const apple = new Apple(4, 5, 2);
+//   apple.left();
+//   apple.sell(3);
+//   apple.receive(4);
+//   apple.left();
