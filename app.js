@@ -5,6 +5,7 @@ const app = express();
 
 //MongoDB Call
 const db = require("./server").db();
+const mongoDB = require("mongodb");
 
 // 1: KIrish code
 app.use(express.static("public"));
@@ -28,6 +29,13 @@ app.post("/create-item", (req, res) => {
    });
 });
 
+app.post("/delete-item", (req, res) => {
+   const id = req.body.id;
+   db.collection("plans").deleteOne({_id: new mongoDB.ObjectId(id)}, function(err, data) {
+    res.json({state: "success" });
+   })
+});
+
 app.get("/", function (req, res) {
     console.log("user entered /");
     db.collection("plans")
@@ -35,7 +43,7 @@ app.get("/", function (req, res) {
     .toArray((err, data) => {
         if(err) {
             console.log(err);
-            res.end("someting wwent wrong");
+            res.end("someting went wrong");
         } else {
             console.log(data);
             res.render("reja", { items: data });

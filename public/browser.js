@@ -22,7 +22,7 @@ document
 .addEventListener("submit", function (e) {
     e.preventDefault();
 
-    axious
+    axios
     .post("/create-item", {reja: createField.value })
     .then((response) => {
         document
@@ -35,4 +35,26 @@ document
         console.log("Iltimos qaytadan harakat qiling!");
     });
 
+});
+
+document.addEventListener("click", function (e) {
+  //delete 
+  console.log(e.target);
+  if(e.target.classList.contains("delete-me")) {
+    if (confirm("You sure you wanna delete?")) {
+    axios
+    .post("/delete-item", { id: e.target.getAttribute("data-id") })
+    .then((response) => {
+      console.log(response.data);
+      e.target.parentElement.parentElement.remove();
+    })
+    .catch((err) => {
+      console.log("Please try again!");
+    });
+    }
+  }
+  //edit
+  if(e.target.classList.contains("edit-me")) {
+    alert("You have pressed Edit button");
+  }
 });
