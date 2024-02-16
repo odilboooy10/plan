@@ -111,34 +111,34 @@
 
   // TASK 3
 
-//   class Apple {
-//     // constructor
-//     constructor(Iphone, Macbook, Airpods) {
-//       this.Iphone = Iphone;
-//       this.Macbook = Macbook;
-//       this.Airpods = Airpods;
-//     }
+  class Apple {
+    // constructor
+    constructor(Iphone, Macbook, Airpods) {
+      this.Iphone = Iphone;
+      this.Macbook = Macbook;
+      this.Airpods = Airpods;
+    }
   
-//     sell(Iphone) {
-//       this.Iphone -= Iphone;
-//     }
+    sell(Iphone) {
+      this.Iphone -= Iphone;
+    }
   
-//     receive(Airpods) {
-//       this.Airpods += Airpods;
-//     }
+    receive(Airpods) {
+      this.Airpods += Airpods;
+    }
   
-//     left() {
-//       let now = new Date();
-//       let hours = now.getHours();
-//       let minutes = now.getMinutes();
-//       minutes = minutes < 10 ? "0" + minutes : minutes;
-//       console.log(
-//         `Now ${hours}:${minutes} We have ${this.Iphone} Iphone , ${this.Macbook} Macbook and ${this.Airpods} ta Airpods available!`
-//       );
-//     }
-//   }
-//   const apple = new Apple(4, 5, 2);
-//   apple.left();
-//   apple.sell(3);
-//   apple.receive(4);
-//   apple.left();
+    left() {
+      let now = new Date();
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      console.log(
+        `Now ${hours}:${minutes} We have ${this.Iphone} Iphone , ${this.Macbook} Macbook and ${this.Airpods} ta Airpods available!`
+      );
+    }
+  }
+  const apple = new Apple(4, 5, 2);
+  apple.left();
+  apple.sell(3);
+  apple.receive(4);
+  apple.left();
