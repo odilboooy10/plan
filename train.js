@@ -148,23 +148,32 @@
 
 
 
-  const checkContent = (str1, str2) => {
-    let newArr = str2.split("");
-    let newArr1 = [];
+  // const checkContent = (str1, str2) => {
+  //   let newArr = str2.split("");
+  //   let newArr1 = [];
   
-    for (let i = 0; i < newArr.length; i++) {
-      let count = 0;
-      if (str1.length === newArr.length && str1.includes(newArr[i])) {
-        count++;
-      }
-      newArr1.push(count);
-    }
+  //   for (let i = 0; i < newArr.length; i++) {
+  //     let count = 0;
+  //     if (str1.length === newArr.length && str1.includes(newArr[i])) {
+  //       count++;
+  //     }
+  //     newArr1.push(count);
+  //   }
   
-    if (newArr1.includes(0)) {
-      return false;
-    } else {
-      return true;
-    }
+  //   if (newArr1.includes(0)) {
+  //     return false;
+  //   } else {
+  //     return true;
+  //   }
+  // };
+  
+  // console.log(checkContent("Namangan", "ganNaman"));
+
+  //TASK E
+
+
+  const getReverse = (string) => {
+    return string.split("").reverse().join("");
   };
   
-  console.log(checkContent("Namangan", "ganNaman"));
+  console.log(getReverse("Alhamdulillah"));
