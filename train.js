@@ -172,9 +172,24 @@
   //TASK E
 
 
-  const getReverse = (string) => {
-    return string.split("").reverse().join("");
+  // const getReverse = (string) => {
+  //   return string.split("").reverse().join("");
+  // };
+  
+  // console.log(getReverse("Alhamdulillah"));
+  
+  //TASK F
+
+  const getReverse = (str) => {
+    const newArr = str.split("");
+    const newValue = [...new Set(newArr)];
+  
+    if (newArr.length !== newValue.length) {
+      return true;
+    } else {
+      return false;
+    }
   };
   
-  console.log(getReverse("Alhamdulillah"));
+  console.log(getReverse("Nice"));
   
