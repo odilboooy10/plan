@@ -180,16 +180,24 @@
   
   //TASK F
 
-  const getReverse = (str) => {
-    const newArr = str.split("");
-    const newValue = [...new Set(newArr)];
+  // const getReverse = (str) => {
+  //   const newArr = str.split("");
+  //   const newValue = [...new Set(newArr)];
   
-    if (newArr.length !== newValue.length) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+  //   if (newArr.length !== newValue.length) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // };
   
-  console.log(getReverse("Nice"));
+  // console.log(getReverse("Nice"));
   
+// TASK G
+
+const getHighestIndex = (num) => {
+  let getHigestNum = Math.max(...num);
+  return num.indexOf(getHigestNum);
+};
+
+console.log(getHighestIndex([5, 51, 12, 25, 85, 19]));
